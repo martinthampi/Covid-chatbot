@@ -19,7 +19,7 @@ It checks one have chances of covid 19 and take necessary Actions
 You can do it by:
   - Step 1 Add this Markup To the Head of your Website
 ```shell
-<link rel="stylesheet" href="https://covid19-chatbot.netlify.app/example/widget.css"><iframe src="https://covid19-chatbot.netlify.app/"id="covid"></iframe><div id="covidBtn"><img src="https://www.flaticon.com/premium-icon/icons/svg/3082/3082417.svg"></div><script src="https://covid19-chatbot.netlify.app/example/widget.js"></script>
+<link rel="stylesheet" href="https://savio.works/TeamCovid/covid19-chatbot/example/widget.css"><iframe src="https://covid19-chatbot.netlify.app/"id="covid"></iframe><div id="covidBtn"><img src="https://www.flaticon.com/premium-icon/icons/svg/3082/3082417.svg"></div><script src="https://savio.works/TeamCovid/covid19-chatbot/example/widget.css"></script></script>
 ```
   - COVID-19 Risk Assessment Chatbot is Activated In your Website. Enjoy !
 
