@@ -31,7 +31,7 @@ Our Future plans about this project
 
 ## Imprortant links
 - Link To My Portfolio: http://savio.works/
-- Link To The website I developed For Covid-Chatbot : https://team-covid.netlify.app/
+- Link To The website I developed For Covid-Chatbot : https://covid-chatbot.vercel.app/
 - Link To PPT of the project : https://teamcovid.netlify.app/covid19-chatbot.pdf/
 - Link To the Youtube Video For Demonstration: http://tr.im/covidchat/
 - Follow Me on Instgagram: https://www.instagram.com/teen_developer/
