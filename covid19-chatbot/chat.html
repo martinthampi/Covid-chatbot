@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 ChatBot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/check.js"></script>
+    <link rel="icon" href="https://www.flaticon.com/premium-icon/icons/svg/3082/3082417.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loader-wrapper"></div>
+    <header><img src="https://www.flaticon.com/premium-icon/icons/svg/3082/3082417.svg" alt=""><div class="h-text"><h2 style="font-size: 26px;">Covid-19 ChatBot</h2>
+        <h3 id="dateDisplay" style="font-size: 16px;color: gray;"></h3></div></header>
+    <section id="home" class="home">
+        <div id="questions" class="quem">
+            <div class="q">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>Hi! Our coronavirus disease self assessment scan has been developed on the basis of guidelines from the WHO and MHFW, Government of India. This interaction should not be taken as expert medical advice. Any information you share with us will be kept strictly confidential.</h4>
+                </div>
+            </div>
+            <div class="q" id="qa">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>How old are you?</h4>
+                </div>
+                <div class="ans">
+                    <input type="number" class="text ina" placeholder="19"><input type="submit" value="Submit" class="button bta" onclick="checktwo()">
+                </div>
+            </div>
+            
+            <div class="q" id="check-three" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>Are you experiencing any symptoms.</h4>
+                </div>
+                <div class="ans" id="checki">
+                    <select id="my-select" onclick="yes()">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>                       
+                    </select>
+                    <div id="ss"><input type="text" class="text inb" id="sym" placeholder="eg-Cough, fever"></div>
+                    <input type="submit" value="Submit" class="button btb" onclick="checkthree()">
+                </div>
+            </div>
+            <div class="q" id="check-five" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>Please select your travel and exposure details</h4>
+                </div>
+                <div class="ans">
+                    <select>
+                        <option value="">History Of Travel In The past Week</option>
+                        <option value="">No Travel History</option>
+                    </select><input type="submit" value="Submit" class="button btc" onclick="checkfour()">
+                </div>
+            </div>
+            <div class="q" id="check-six" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>Do your symptoms progressed over the last 48 hrs?</h4>
+                </div>
+                <div class="ans">
+                    <select id="my-select">
+                        <option value="" disabled selected>Choose</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select><input type="submit" value="Submit" class="button btd" onclick="checkfive()">
+                </div>
+            </div>
+            <div class="q" id="check-seven" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>Do you cough Frequently?</h4>
+                </div>
+                <div class="ans">
+                    <select id="my-select">
+                        <option value="" disabled selected>Choose</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select><input type="submit" value="Submit" class="button bte" onclick="checksix()">
+                </div>
+            </div>
+            <div class="q" id="check-eight" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>Do you have shortness of breath?</h4>
+                </div>
+                <div class="ans">
+                    <select id="my-select">
+                        <option value="" disabled selected>Choose</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select><input type="submit" value="Submit" class="button btf" onclick="final()">
+                </div>
+            </div>
+            <div class="q" id="anl" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>I’m analyzing your answers…</h4>
+                </div>
+            </div>
+            <div class="q" id="result" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4 id="demo"></h4>
+                </div>
+            </div>
+            <div class="q" id="pre" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>1. Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water.</h4><br>
+                    <h4>2. Maintain at least 1 metre (3 feet) distance between yourself and others. </h4><br>
+                    <h4>3. Avoid going to crowded places. </h4><br>
+                    <h4>4. Avoid touching eyes, nose and mouth.  </h4><br>
+                    <h4>5. Make sure you, and the people around you, follow good respiratory hygiene. </h4><br>
+                    <h4>6. Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever, until you recover. </h4>
+                </div>
+            </div>
+            <div class="q" id="help" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <img src="https://cdn.dribbble.com/users/492311/screenshots/5896522/online__service-01.jpg" alt="" class="help">
+                    <h4><a href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf" style="color: #000;text-decoration: none;" target="_blank">Click Here to view the help line numbers of your state. In case of emetgency, don't Hesitate to call them.</a></h4>
+                </div>
+            </div>
+            
+            <div class="q" id="vid" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>Also have a look on this video for a quick intro.</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FC4soCjxSOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
+                </div>
+            </div>
+            <div class="q" id="run" style="display: none;">
+                <h4>Covid-19 ChatBot</h4>
+                <div class="que">
+                    <h4>Do you want to check Covid-19 analysis again</h4>
+                    <button style="margin: 10px; border: 2px solid #1128F5; color: #1128F5; border-radius: 20px;" class="button" onclick="refreshPage()">Yes</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    $(document).ready(function(){
+        $('.ina').keypress(function(e){
+        if(e.keyCode==13)
+            $('.bta').click();
+        });
+
+        $('.inb').keypress(function(e){
+        if(e.keyCode==13)
+            $('.btb').click();
+        });
+
+        $('.inc').keypress(function(e){
+        if(e.keyCode==13)
+            $('.btc').click();
+        });
+
+        $('.ind').keypress(function(e){
+        if(e.keyCode==13)
+            $('.btd').click();
+        });
+        $('.ine').keypress(function(e){
+        if(e.keyCode==13)
+            $('.bte').click();
+        });
+        $('.inf').keypress(function(e){
+        if(e.keyCode==13)
+            $('.btf').click();
+        });
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script>
+        document.getElementById("dateDisplay").innerHTML = moment().format('MMMM Do YYYY, h:mm a');
+    </script>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+</body>
+</html>

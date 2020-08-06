@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.loader-wrapper{
+	position: fixed;
+	width: 100%;
+	height: 112vh;
+	background: #000
+	url('https://assets.materialup.com/uploads/d897134f-48d1-4302-b3fd-ea045f3d4151/preview.gif')
+	    no-repeat center center;	
+    z-index: 99999;   
+    margin-top: -50px;
+    cursor: progress;
+}
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background: #131417;
+    font-family: 'Poppins', sans-serif;
+}
+.home{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.home-left{
+    height: 100%;
+    width: 50%;
+    color: #FFFFFF;
+}
+.home-left h3{
+    font-size: 2.25em;
+}
+.home-left p{
+    font-size: 1.2em;
+    color: #eee;
+}
+.home-left .cont{
+    margin-left: 40px;
+    margin-top: 20%;
+}
+#about .cont{
+    margin-top: 35%;
+}
+.home-right{
+    height: 100%;
+    width: 50%;
+    overflow: visible;
+}
+.team{
+    height: 350px;
+    margin-top: 10%;
+    position: absolute;
+}
+.alt{
+    margin-top: 55%;
+    height: 525px;   
+    margin-left: 7.5%; 
+}
+#sl{
+    font-size: 1.75em;
+}
+
+@media(max-width:600px){
+    #home{
+        margin-top: 50px;
+    }
+    #about{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .home{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+    .home-left{
+        height: 45%;
+        width: 100%;
+        color: #FFFFFF;
+    }
+    .home-left h3{
+        font-size: 1.85em;
+    }
+    .home-left p{
+        font-size: 1em;
+        color: #eee;
+    }
+    .home-left .cont{
+        margin: 10% 0 0 20px;
+    }
+    #about .cont{
+        margin: 10% 0 0 20px;
+    }
+    .home-right{
+        height: 55%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .team{
+        height: 200px;
+        margin-top: 0%;
+        position: absolute;
+    }
+    .alt{
+        margin-top: 40%;
+        height: 325px;   
+        margin-left: 0;    
+        overflow: hidden;
+    }
+}
+#project{
+    height: 667px;
+    width: 491px;
+    transform: scale(0.7);
+    margin-top: 0px;
+    position: relative;
+    box-shadow: 0px 10px 1px #111, 0 10px 20px #333;
+    margin-left: 20%;
+    border-radius: 35px;
+    border: 5px solid #000;
+}
+.panel{
+    height: 50%;
+    width: 50%;
+    background: #2C303A;
+    margin-top: -35%;
+    position: absolute;
+    z-index: -1;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    overflow: hidden;
+}
+@media(max-width:600px){
+    #about .home-left h3{
+        font-size: 1.5em;
+        padding: 0 30px 0 0;
+    }
+    #project{
+        width: 375px;
+        transform: scale(.8);
+        margin-left: -5%;
+        margin-top: -100px;
+    }
+    .panel{
+        display: none;
+    }
+}
+#features{
+    height: 75vh;
+    width: 100%;
+}
+.container{
+    height: 75%;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+}
+.bx{
+    height: 100%;
+    width: 24%;
+    margin: 0 1%;
+    background: #2C303A;
+    border-radius: 20px;
+    transition: .5s;
+}
+.bx img{
+    height: 55px;
+    margin-left: 5%;
+    background: #131417;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: -30px;
+}
+#features{
+    color: #fff;
+}
+.bx h3{
+    padding: 0 20px;
+    font-size: 1.35em;
+    margin-top: 20px;
+}
+.bx p{
+    padding: 0 20px;
+    font-size: 1.05em;
+}
+.sm{
+    height: 70px;
+    margin-left: -40px;
+}
+#setup{
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+#setup h1{
+    margin-bottom: 80px;
+    font-size: 2em;
+}
+#setup span{
+    color: #DCA888;
+}
+#step-two h2{
+    padding: 0 325px;
+}
+#carbon{
+    display: none;
+}
+
+@media(max-width:600px){
+    #setup{
+        display: none;
+    }
+    #code{
+        display: none;
+    }
+    #features{
+        height: 175vh;
+        width: 100%;
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .bx{
+        height: 25%;
+        width: 100%;
+        margin: 5% 0%;
+        background: #2C303A;
+        border-radius: 0px;
+    }
+    .bx img{
+        height: 55px;
+        margin-left: 5%;
+        background: #131417;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: -30px;
+    }
+    #features{
+        color: #fff;
+        overflow-x: hidden;
+    }
+    .bx h3{
+        padding: 0 10px;
+        font-size: 1.35em;
+        margin-top: 20px;
+    }
+    .bx p{
+        padding: 0 10px;
+        font-size: 1.05em;
+    }
+    .sm{
+        display: none;
+    }
+}
+#dev{
+    height: 50vh;
+    width: 100%;
+}
+.box{
+    height: 100%;
+    width: 60%;
+    margin-left: 20%;
+    display: flex;
+}
+.bb{
+    height: 100%;
+    width: 48%;
+    margin: 0 1%;
+    background: #2C303A;
+    border-radius: 20px;
+    transition: .5s;
+}
+.bb img{
+    box-shadow: 5px 5px rgba(0, 98, 90, 0.4),
+    10px 10px rgba(0, 98, 90, 0.3),
+    15px 15px rgba(0, 98, 90, 0.2),
+    20px 20px rgba(0, 98, 90, 0.1),
+    25px 25px rgba(0, 98, 90, 0.05);
+    margin-top: 10%;
+    margin-left: 25%;
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+}
+.bb h2{
+    text-align: center;
+    color: #fff;
+}
+#dev h1{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+#plans .team{
+    height: 250px;
+    margin-top: 15%;
+}
+#plans{
+    margin-top: 7.5%;
+    overflow: hidden;
+}
+.bx:hover,.bb:hover{
+    transform: scale(1.05);
+}
+
+@media(max-width:600px){
+    #dev{
+        height: 85vh;
+        width: 100%;
+    }
+    #plans{
+        margin-top: 0%;
+    }
+    #plans .team{
+        margin-top: 0%;
+    }
+    .box{
+        height: 100%;
+        width: 100%;
+        margin-left: 0%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .bb{
+        height: 50%;
+        width: 100%;
+        margin: 1% 0;
+        background: #2C303A;
+        border-radius: 0px;
+    }
+    .bb img{
+        margin-top: 10%;
+        margin-left: 25%;
+        height: 175px;
+        width: 175px;
+    }
+    .bb h2{
+        text-align: center;
+        color: #fff;
+    }
+    #plans{
+        margin-top: 200px;
+        overflow: hidden;
+    }
+    #plans h3{
+        padding: 0 20px 0 0;
+    }
+}
+@media(max-width:600px){
+    #features{
+       height: 170vh;
+       overflow: visible;
+    }
+    #dev{
+        margin-top: 50%;
+    }
+    #plans .team{
+        height: 150px;
+        margin-top: 15%;
+    }
+}
+#footer{
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    background: #000;
+    
+    padding: 15px 0 0 0;
+    border-top: 5px solid #DCA888;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23eeeeee' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+#footer p{
+    font-weight: 400;
+    font-size: 1.45em;
+}
+.luxbar-menu-dark{
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23eeeeee' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    border-bottom: 5px solid #DCA888;
+}
+.luxbar-item{
+    color: #ddd;
+}
+.luxbar-item a{
+    
+    padding: 15px 20px 5px 20px;
+    position: relative;
+}
+.luxbar-item a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #DCA888;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.luxbar-item a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+#covid{
+    height: 100vh;
+    width: 100vw;
+}
+#myChart{
+    background: #ffffff;
+}
